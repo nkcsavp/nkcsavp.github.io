@@ -1,0 +1,28 @@
+{
+  "name": "nkcsavp.github.io",
+  "version": "1.0.0",
+  "description": "User and Developer docs of Algorithm Visualization Platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkcsavp/nkcsavp.github.io.git"
+  },
+  "author": "NicerWang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkcsavp/nkcsavp.github.io/issues"
+  },
+  "homepage": "https://github.com/nkcsavp/nkcsavp.github.io#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-auto-sidebar": "^2.3.2",
+    "vuepress-plugin-autobar": "boboidream/vuepress-bar"
+  }
+}
