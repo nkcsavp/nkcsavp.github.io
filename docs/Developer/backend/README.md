@@ -1,10 +1,8 @@
-# 后端文档
-
-## API接口定义
+# 后端API参考
 
 ### 统一返回值格式
 
-> 所有返回值均携带`Http`状态码，在`aioxs`中需要使用`catch`处理。
+> 所有返回值均携带`Http`状态码，在`aioxs`中需要使用`catch`处理
 >
 > 除`/info/tasks`
 
@@ -96,5 +94,5 @@
 
   具体代码，尤其注意`Python`的格式问题
 
-* [测试代码](./TestCasesOfSubmitAPI.html)
+* [测试代码](./TestCases.html)
 

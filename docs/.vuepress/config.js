@@ -14,9 +14,9 @@ module.exports = {
         {
           text: 'Nav',
           items: [
-            { text: 'Developer-Frontend', link: '/Developer/frontend/' },
-            { text: 'Developer-Backend', link: '/Developer/backend/' },
-            { text: 'User', link: '/User/index.html' }
+            { text: '前端Contribute指南', link: '/Developer/frontend/' },
+            { text: '后端API参考', link: '/Developer/backend/' },
+            { text: '用户文档', link: '/User/index.html' }
           ]
         }
       ]

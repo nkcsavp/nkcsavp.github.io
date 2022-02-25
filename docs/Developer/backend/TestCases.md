@@ -1,4 +1,4 @@
-# TestCasesOfSubmitAPI
+# TestCases
 
 * array_java
 
