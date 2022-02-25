@@ -26,6 +26,13 @@
    | `mvs`   | 一个`Vue`的`ref`对象，存储动作数据（关于可用的动作数据，查阅[AlgoMotion文档](https://github.com/NicerWang/Algomotion#关于默认的movesreader)） | 赋值或`push`时，使用`mvs.value`   |
    | `infos` | 一个`Vue`的`ref`对象，存储信息数据                           | 赋值或`push`时，使用`infos.value` |
 
+4. Debug
+
+   ```sh
+   npm install
+   npm run dev
+   ```
+
 4. `commit`&`push`
 
    `commit`的信息格式为`feat:sort-bubble`(修改了`sort.js`，且新增了名为`bubble`的函数)
