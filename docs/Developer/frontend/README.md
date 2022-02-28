@@ -14,17 +14,23 @@
 
      `src/components/generator/tree.js`
 
+   * 如果添加一个图算法，仅需修改
+
+     `src/components/generator/graph.js`
+
 3. 修改方式
 
-   请按照文件中的注释进行，**同时也提供了实例，请参照示例编写**
+   请按照文件中的注释进行，**同时也提供了示例，请参照示例编写**
 
    函数的参数解释如下：
 
-   | 参数    | 解释                                                         | 其他                              |
-   | ------- | ------------------------------------------------------------ | --------------------------------- |
-   | `data`  | 一个数组，存储样例数据(对于树，索引为结点在完全二叉树中的位置，空结点为`undefined`) |                                   |
-   | `mvs`   | 一个`Vue`的`ref`对象，存储动作数据（关于可用的动作数据，查阅[AlgoMotion文档](https://github.com/NicerWang/Algomotion#关于默认的movesreader)） | 赋值或`push`时，使用`mvs.value`   |
-   | `infos` | 一个`Vue`的`ref`对象，存储信息数据                           | 赋值或`push`时，使用`infos.value` |
+   | 参数             | 解释                                                         | 其他                              |
+   | ---------------- | ------------------------------------------------------------ | --------------------------------- |
+   | `data`           | 一个数组，存储样例数据(对于树，索引为结点在完全二叉树中的位置，空结点为`undefined`) |                                   |
+   | `mvs`            | 一个`Vue`的`ref`对象，存储动作数据（关于可用的动作数据，查阅[AlgoMotion文档](https://github.com/NicerWang/Algomotion#关于默认的movesreader)） | 赋值或`push`时，使用`mvs.value`   |
+   | `infos`          | 一个`Vue`的`ref`对象，存储信息数据                           | 赋值或`push`时，使用`infos.value` |
+   | `rel`(仅Graph)   | 一个二位矩阵，表示图的边                                     |                                   |
+   | `start`(仅Graph) | 对于某些算法的起始结点`index`                                |                                   |
 
 4. Debug
 
