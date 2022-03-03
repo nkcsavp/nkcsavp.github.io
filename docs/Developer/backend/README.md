@@ -4,7 +4,7 @@
 
 > 所有返回值均携带`Http`状态码，在`aioxs`中需要使用`catch`处理
 >
-> 除`/info/tasks`
+> 除`/info/tasks`和`/share`
 
 ```json
 {
@@ -36,34 +36,82 @@
     * `mail`邮箱
     * `pwd`密码
 
+* 找回密码（需要申请邮箱验证码）
+
+  * 申请邮箱验证码`/lostVerify` 
+
+    * 参数
+
+      * `mail`邮箱（目前仅支持教育邮箱`abc@abc.edu.cn`）
+  * 找回密码`/lostUpdate`
+
+    * 参数
+      * `mail`邮箱
+      * `pwd`密码
+      * `verify`邮箱验证码
+
 * 退出登录
 
   * 地址`/logout`
+
+* 根据`Share Key`获取任务
+
+  * 地址`/share`
+
+  * 参数
+
+    * `identifier`指定`Share Key`
+
+  * 返回值示例
+
+    ```json
+    {"uid": 4,
+      "time": 1632392708107,
+      "status": 1,
+      "animation": "{'ops':['get(1)']}",
+      "sample": "{1,2,6,5431321,32}",
+      "idetifier": "4_1632392708107",
+      "lang": "java",
+      "mode": "array",
+      "code": "..."}
+    ```
 
 * 查看当前用户所有执行过的任务(需登陆)
 
   * 地址`/info/tasks`
   * 返回值示例:
 
-  ```json
-  [{"uid": 4,
-    "time": 1632392708107,
-    "status": 1,
-    "animation": "{'ops':['get(1)']}",
-    "sample": "{1,2,6,5431321,32}",
-    "idetifier": "4_1632392708107",
-    "lang": "java",
-    "mode": "array",
-    "code": "..."}]
-  ```
+      ```json
+      [{"uid": 4,
+        "time": 1632392708107,
+        "status": 1,
+        "animation": "{'ops':['get(1)']}",
+        "sample": "{1,2,6,5431321,32}",
+        "idetifier": "4_1632392708107",
+        "lang": "java",
+        "mode": "array",
+        "code": "..."}]
+      ```
+
+* 分享任务(需登陆)
+
+  * 地址`/info/tasks/share`
+
+  * 参数
+
+    * `identifier`任务ID
+
+    * `shared`
+
+      `true`or`false`，用于设定分享与否
+
+  * 返回值中的`msg`为`Share Key`
 
 * 更新密码(需登陆)
 
   * 地址`/info/updatepwd`
-
-* 参数
-
-  * `pwd`新密码
+  * 参数
+    * `pwd`新密码
 
 ### 代码提交与运行接口(需登陆)
 
